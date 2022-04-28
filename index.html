@@ -16,6 +16,36 @@
             height: 60px;
             top: 0;
             z-index: 5;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        .headerContainer {
+            width: 975px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .logo {
+            width: 30%;
+            padding-right: 10px;
+        }
+
+        .search {
+            flex-grow: 1;
+        }
+
+        .menu {
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+            padding-left: 50px;
         }
 
         .container {
@@ -56,6 +86,7 @@
 
         .card-title {
             margin-left: 10px;
+            margin-bottom: initial;
             font-size: initial;
             font-weight: bold;
         }
@@ -82,7 +113,22 @@
 </head>
 <body>
     <header>
-        <h1>Instagram</h1>
+        <div class="headerContainer">
+            <div class="logo">
+                <img src="images/instagram.png">
+            </div>
+            <div class="search">
+                <input class="search" type="text">
+            </div>
+            <div class="menu">
+                <img width="24px" height="24px" src="images/home.png">
+                <img width="24px" height="24px" src="images/direct.png">
+                <img width="24px" height="24px" src="images/plus.png">
+                <img width="24px" height="24px" src="images/compass.png">
+                <img width="24px" height="24px" src="images/heart.png">
+                <img width="24px" height="24px" style="border-radius: 50%" src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+            </div>
+        </div>
     </header>
     <div class="container">
 <!--        타임라인 피드 표시 영역-->
@@ -96,7 +142,7 @@
                             <img width="30px" height="30px" style="border-radius: 50%" src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
                             <h5 class="card-title">user_id</h5>
                         </div>
-                        <img width="30px" height="30px" src="images/option.png">
+                        <img width="24px" height="24px" src="images/more.png">
                     </div>
 <!--                    이미지 슬라이드 캐러셀-->
                     <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
