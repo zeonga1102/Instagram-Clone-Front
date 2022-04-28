@@ -15,6 +15,7 @@
             position: sticky;
             height: 60px;
             top: 0;
+            margin-bottom: 10px;
         }
 
         .container {
@@ -35,6 +36,19 @@
             top: 60px;
         }
 
+        .card {
+            border-radius: initial;
+        }
+
+        .card-body {
+            padding: initial;
+        }
+
+        .card-text {
+            margin: initial;
+            padding: 5px 10px 0 10px;
+        }
+
     </style>
 
 </head>
@@ -43,7 +57,19 @@
         <h1>Instagram</h1>
     </header>
     <div class="container">
-        <div class="timeline">타임라인</div>
+        <div class="timeline">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <img src="https://media.wired.com/photos/5fb70f2ce7b75db783b7012c/master/pass/Gear-Photos-597589287.jpg"
+                         class="card-img-bottom" alt="...">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+
+        </div>
         <div class="side">메뉴</div>
     </div>
 </body>
