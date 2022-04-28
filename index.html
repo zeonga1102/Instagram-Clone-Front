@@ -15,19 +15,18 @@
             position: sticky;
             height: 60px;
             top: 0;
-            margin-bottom: 10px;
-            z-index: 2;
+            z-index: 5;
         }
 
         .container {
-            background-color: purple;
+            /*background-color: purple;*/
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
             height: 2000px;
         }
 
         .timeline {
-            background-color: gray;
+            /*background-color: gray;*/
         }
 
         .side {
@@ -40,6 +39,10 @@
         .card {
             max-width: 600px;
             border-radius: initial;
+            margin-top: 30px;
+
+            border-color: gainsboro;
+            border-radius: 5px;
         }
 
         .card-body {
@@ -49,6 +52,29 @@
         .card-text {
             margin: initial;
             padding: 5px 10px 0 10px;
+        }
+
+        .card-title {
+            margin-left: 10px;
+            font-size: initial;
+            font-weight: bold;
+        }
+
+        .feedInfo {
+            display: grid;
+            grid-template-columns: 1fr 30px;
+
+            padding: 15px;
+        }
+
+        .userInfo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .feedInfo > img {
+            margin: auto;
         }
 
     </style>
@@ -64,14 +90,22 @@
 <!--            피드 한개-->
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+<!--                    프로필 사진, 아이디, 옵션 버튼-->
+                    <div class="feedInfo">
+                        <div class="userInfo">
+                            <img width="30px" height="30px" style="border-radius: 50%" src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+                            <h5 class="card-title">user_id</h5>
+                        </div>
+                        <img width="30px" height="30px" src="images/option.png">
+                    </div>
+<!--                    이미지 슬라이드 캐러셀-->
+                    <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
                                     class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
                                     aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
                                     aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
@@ -85,17 +119,18 @@
                                 <img src="https://www.usnews.com/dims4/USNEWS/f13645c/2147483647/resize/1200x%3E/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2F24%2F33%2F23be13ed44f3950df8263ccd6753%2Fpods220126-01.JPG" class="d-block w-100" alt="...">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
                                 data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
                                 data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
+<!--                    피드 본문-->
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
