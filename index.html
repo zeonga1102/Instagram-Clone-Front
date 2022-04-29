@@ -143,28 +143,40 @@
             padding: 5px 10px 0 10px;
         }
 
-        .card-title {
-            margin-left: 10px;
-            margin-bottom: initial;
-            font-size: initial;
-            font-weight: bold;
-        }
-
-        .feedInfo {
+        .feedHeader {
             display: grid;
             grid-template-columns: 1fr 30px;
 
-            padding: 15px;
+            height: 60px;
+            /*padding: 15px;*/
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
-        .userInfo {
+        .feedHeader > img {
+            margin: auto;
+        }
+
+        .user {
             display: flex;
             flex-direction: row;
             align-items: center;
+            font-size: small;
         }
 
-        .feedInfo > img {
-            margin: auto;
+        .user > div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .userId {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        .optional {
+            color: darkgray;
         }
 
         .curUser {
@@ -176,6 +188,7 @@
             align-items: center;
 
             margin-top: 30px;
+            margin-bottom: 10px;
         }
 
         .curUser > div {
@@ -185,12 +198,13 @@
 
         p {
             margin-bottom: 0;
+            line-height: 1.1rem;
         }
 
         .recommendTop {
             display: flex;
             flex-direction: row;
-            
+            font-weight: bold;
         }
 
     </style>
@@ -222,10 +236,13 @@
             <div class="card">
                 <div class="card-body">
 <!--                    프로필 사진, 아이디, 옵션 버튼-->
-                    <div class="feedInfo">
-                        <div class="userInfo">
+                    <div class="feedHeader">
+                        <div class="user">
                             <img width="30px" height="30px" style="border-radius: 50%" src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
-                            <h5 class="card-title">user_id</h5>
+                            <div>
+                                <p class="userId">user_id</p>
+                                <p class="optional">location</p>
+                            </div>
                         </div>
                         <img width="24px" height="24px" src="images/more.png">
                     </div>
@@ -284,7 +301,9 @@
                     <p style="flex-grow: 1">회원님을 위한 추천</p>
                     <p>모두 보기</p>
                 </div>
+                <div class="curUser">
 
+                </div>
             </div>
             <footer>
 
