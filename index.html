@@ -11,7 +11,7 @@
     <style>
 
         header {
-            background-color: green;
+            background-color: white;
             position: sticky;
             height: 60px;
             top: 0;
@@ -21,42 +21,88 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
+
             padding-left: 10px;
             padding-right: 10px;
 
+            border-bottom: gainsboro 1px solid;
         }
 
         .headerContainer {
             width: 975px;
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: auto auto 255px;
         }
 
         .logo {
-            width: 30%;
+            /*background-color: blue;*/
+            max-width: 333px;
+            min-width: auto;
             padding-right: 10px;
+            display: flex;
+            align-items: center;
         }
 
         .search {
-            flex-grow: 1;
+            /*background-color: red;*/
+            max-width: 268px;
+            /*flex-grow: 1;*/
+            margin-right: 20px;
+        }
+
+        .search > input {
+            width: 100%;
+            height: 35px;
+
+            background-color: rgb(243, 243, 243);
+            border: none;
+            border-radius: 5px;
+
+            background-image: url("images/search.png");
+            background-size: 18px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 35px;
+
+        }
+
+        input:focus {
+            outline: none;
+            background-image: none;
+            padding-left: 10px;
+            padding-right: 25px;
+        }
+
+        @media screen and (max-width: 625px) {
+            .search > input {
+                display: none;
+            }
         }
 
         .menu {
+            /*background-color: blue;*/
             display: flex;
-            width: 30%;
+            min-width: 255px;
             justify-content: space-between;
-            padding-left: 50px;
+            align-items: center;
+            /*padding-left: 50px;*/
+        }
+
+        .menu > img {
+            /*margin-left: 22px;*/
         }
 
         .container {
-            /*background-color: purple;*/
+            background-color: purple;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(483px, 1fr));
             height: 2000px;
+            padding: initial;
         }
 
         .timeline {
-            /*background-color: gray;*/
+            background-color: gray;
+            margin: 0 auto 0 auto;
         }
 
         .side {
@@ -118,7 +164,7 @@
                 <img src="images/instagram.png">
             </div>
             <div class="search">
-                <input class="search" type="text">
+                <input class="search" type="text" placeholder="검색">
             </div>
             <div class="menu">
                 <img width="24px" height="24px" src="images/home.png">
