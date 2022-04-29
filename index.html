@@ -105,6 +105,8 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+
+            margin-top: 30px;
         }
 
         .timeline {
@@ -116,7 +118,7 @@
             background-color: wheat;
             height: 500px;
             position: sticky;
-            top: 60px;
+            top: 90px;
             flex-grow: 1;
             padding-left: 10px;
             padding-right: 10px;
@@ -128,7 +130,6 @@
         .card {
             max-width: 600px;
             border-radius: initial;
-            margin-top: 30px;
 
             border-color: gainsboro;
             border-radius: 3px;
@@ -179,21 +180,27 @@
             color: darkgray;
         }
 
-        .curUser {
+        .userList {
             /*background-color: blue;*/
-            height: 70px;
+            /*height: 70px;*/
 
             display: flex;
             flex-direction: row;
             align-items: center;
 
-            margin-top: 30px;
+            /*margin-top: 30px;*/
             margin-bottom: 10px;
         }
 
-        .curUser > div {
+        .userList > div {
             flex-grow: 1;
             margin-left: 10px;
+        }
+
+        .userList > p {
+            font-size: small;
+            font-weight: bold;
+            color: deepskyblue;
         }
 
         p {
@@ -201,10 +208,11 @@
             line-height: 1.1rem;
         }
 
-        .recommendTop {
+        .recommendHeader {
             display: flex;
             flex-direction: row;
             font-weight: bold;
+            margin: 20px 0 10px 10px;
         }
 
     </style>
@@ -287,22 +295,75 @@
 
         </div>
         <div class="side">
-            <div class="curUser">
+            <div class="userList">
                 <img width="60px" height="60px" style="border-radius: 50%" src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
-                <div>
-                    <p><strong>user_id</strong></p>
-                    <p>name</p>
+                <div class="user">
+                    <div>
+                        <p class="userId">user_id</p>
+                        <p class="optional">name</p>
+                    </div>
                 </div>
                 <p>전환</p>
-
             </div>
             <div class="recommend">
-                <div class="recommendTop">
-                    <p style="flex-grow: 1">회원님을 위한 추천</p>
-                    <p>모두 보기</p>
+                <div class="recommendHeader">
+                    <p style="flex-grow: 1; font-size: 0.9rem; color: darkgray">회원님을 위한 추천</p>
+                    <p style="font-size: small">모두 보기</p>
                 </div>
-                <div class="curUser">
-
+                <div class="userList">
+                    <div class="user">
+                        <img width="30px" height="30px" style="border-radius: 50%"
+                             src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+                        <div>
+                            <p class="userId">user_id</p>
+                            <p class="optional">recommend</p>
+                        </div>
+                    </div>
+                    <p>팔로우</p>
+                </div>
+                <div class="userList">
+                    <div class="user">
+                        <img width="30px" height="30px" style="border-radius: 50%"
+                             src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+                        <div>
+                            <p class="userId">user_id</p>
+                            <p class="optional">recommend</p>
+                        </div>
+                    </div>
+                    <p>팔로우</p>
+                </div>
+                <div class="userList">
+                    <div class="user">
+                        <img width="30px" height="30px" style="border-radius: 50%"
+                             src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+                        <div>
+                            <p class="userId">user_id</p>
+                            <p class="optional">recommend</p>
+                        </div>
+                    </div>
+                    <p>팔로우</p>
+                </div>
+                <div class="userList">
+                    <div class="user">
+                        <img width="30px" height="30px" style="border-radius: 50%"
+                             src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+                        <div>
+                            <p class="userId">user_id</p>
+                            <p class="optional">recommend</p>
+                        </div>
+                    </div>
+                    <p>팔로우</p>
+                </div>
+                <div class="userList">
+                    <div class="user">
+                        <img width="30px" height="30px" style="border-radius: 50%"
+                             src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+                        <div>
+                            <p class="userId">user_id</p>
+                            <p class="optional">recommend</p>
+                        </div>
+                    </div>
+                    <p>팔로우</p>
                 </div>
             </div>
             <footer>
