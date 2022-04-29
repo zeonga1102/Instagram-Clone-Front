@@ -145,11 +145,6 @@
             padding: initial;
         }
 
-        .card-text {
-            margin: initial;
-            padding: 5px 10px 0 10px;
-        }
-
         .feedHeader {
             display: grid;
             grid-template-columns: 1fr 30px;
@@ -228,6 +223,37 @@
             color: rgb(200, 200, 200);
         }
 
+        .feedContent {
+            padding: 15px;
+        }
+
+        .feedButton {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .feedButton > div {
+            flex-grow: 1;
+        }
+
+        .feedButton > div > img {
+            margin-right: 10px;
+        }
+
+        .likeCount {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .elapsedTime {
+            font-size: 10px;
+            margin-top: 5px;
+            font-weight: bold;
+            color: darkgray;
+        }
+
     </style>
 
 </head>
@@ -300,9 +326,22 @@
                         </button>
                     </div>
 <!--                    피드 본문-->
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="feedContent">
+                        <div class="feedButton">
+                            <div>
+                                <img width="24px" height="24px" src="images/heart.png">
+                                <img width="24px" height="24px" src="images/comment.png">
+                                <img width="24px" height="24px" src="images/direct.png">
+                            </div>
+                            <img width="24px" height="24px" src="images/bookmark.png">
+                        </div>
+                        <p class="likeCount">좋아요 2개</p>
+                        <p style="font-size: 14px"><span style="font-size: small; font-weight: bold">user_id </span>This is a wider card with supporting text below as a natural lead-in
+                            to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="elapsedTime">4시간 전</p>
+                    </div>
+
                 </div>
             </div>
 
