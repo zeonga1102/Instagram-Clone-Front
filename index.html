@@ -95,14 +95,13 @@
         .container {
             background-color: purple;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(483px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(483px, auto));
             height: 2000px;
             padding: initial;
         }
 
         .timeline {
             background-color: gray;
-            margin: 0 auto 0 auto;
         }
 
         .side {
@@ -152,6 +151,26 @@
 
         .feedInfo > img {
             margin: auto;
+        }
+
+        .curUser {
+            /*background-color: blue;*/
+            height: 70px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            margin-top: 30px;
+        }
+
+        .curUser > div {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+
+        p {
+            margin-bottom: 0;
         }
 
     </style>
@@ -230,7 +249,24 @@
             </div>
 
         </div>
-        <div class="side">메뉴</div>
+        <div class="side">
+            <div class="curUser">
+                <img width="60px" height="60px" style="border-radius: 50%" src="https://i.pinimg.com/550x/1c/c5/35/1cc535901e32f18db87fa5e340a18aff.jpg">
+                <div>
+                    <p><strong>user_id</strong></p>
+                    <p>name</p>
+                </div>
+                <p>전환</p>
+
+            </div>
+            <div class="recommend">
+
+            </div>
+            <footer>
+
+            </footer>
+
+        </div>
     </div>
 </body>
 </html>
