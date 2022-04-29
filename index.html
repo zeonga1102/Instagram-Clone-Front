@@ -10,9 +10,14 @@
 
     <link rel="stylesheet" type="text/css" href="./index_CSS.css">
 
-    <style>
+    <script>
 
-    </style>
+        function resize(obj) {
+            obj.style.height = '1px';
+            obj.style.height = (12 + obj.scrollHeight) + 'px';
+        }
+
+    </script>
 
 </head>
 <body>
@@ -101,7 +106,7 @@
                     </div>
                     <div class="commentInput">
                         <img width="24px" height="24px" src="images/emoji.png">
-                        <textarea placeholder="댓글 달기..."></textarea>
+                        <textarea onkeydown="resize(this)" onkeyup="resize(this)" id="textareaComment" placeholder="댓글 달기..."></textarea>
                         <button>게시</button>
                     </div>
                 </div>
