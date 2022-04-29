@@ -1,0 +1,259 @@
+body {
+            background-color: rgb(250, 250, 250);
+        }
+
+        header {
+            background-color: white;
+            position: sticky;
+            height: 60px;
+            top: 0;
+            z-index: 5;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            padding-left: 10px;
+            padding-right: 10px;
+
+            border-bottom: gainsboro 1px solid;
+        }
+
+        .headerContainer {
+            width: 975px;
+            display: grid;
+            grid-template-columns: auto auto 255px;
+        }
+
+        .logo {
+            max-width: 333px;
+            min-width: auto;
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search {
+            max-width: 268px;
+            margin-right: 20px;
+        }
+
+        .search > input {
+            width: 100%;
+            height: 35px;
+
+            background-color: rgb(230, 230, 230);
+            border: none;
+            border-radius: 8px;
+
+            background-image: url("images/search.png");
+            background-size: 18px;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 35px;
+
+            opacity: 0.5;
+
+        }
+
+        input:focus {
+            outline: none;
+            background-image: none;
+            padding-left: 10px;
+            padding-right: 25px;
+        }
+
+        @media screen and (max-width: 625px) {
+            .search > input {
+                display: none;
+            }
+        }
+
+        .menu {
+            /*background-color: blue;*/
+            display: flex;
+            min-width: 255px;
+            justify-content: space-between;
+            align-items: center;
+            /*padding-left: 50px;*/
+        }
+
+        .menu > img {
+            /*margin-left: 22px;*/
+        }
+
+        .container {
+            padding: initial;
+
+            max-width: 975px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            margin-top: 30px;
+        }
+
+        .timeline {
+            min-width: 483px;
+        }
+
+        .side {
+            height: 400px;
+            position: sticky;
+            top: 90px;
+            flex-grow: 1;
+            padding-left: 20px;
+            padding-right: 10px;
+
+            max-width: 600px;
+            min-width: 375px;
+        }
+
+        .card {
+            max-width: 600px;
+            border-radius: initial;
+
+            border-color: gainsboro;
+            border-radius: 3px;
+
+            margin-bottom: 30px;
+        }
+
+        .card-body {
+            padding: initial;
+        }
+
+        .feedHeader {
+            display: grid;
+            grid-template-columns: 1fr 30px;
+
+            height: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .feedHeader > img {
+            margin: auto;
+        }
+
+        .user {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: small;
+        }
+
+        .user > div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .userId {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        .optional {
+            color: darkgray;
+        }
+
+        .userList {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            margin-bottom: 10px;
+        }
+
+        .userList > div {
+            flex-grow: 1;
+        }
+
+        .userList > p {
+            font-size: small;
+            font-weight: bold;
+            color: deepskyblue;
+        }
+
+        p {
+            margin-bottom: 0;
+            line-height: 1.1rem;
+        }
+
+        .recommendHeader {
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+            margin: 20px 0 10px 0px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: small;
+            color: rgb(200, 200, 200);
+        }
+
+        .feedContent {
+            padding: 15px;
+        }
+
+        .feedButton {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .feedButton > div {
+            flex-grow: 1;
+        }
+
+        .feedButton > div > img {
+            margin-right: 10px;
+        }
+
+        .likeCount {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .elapsedTime {
+            font-size: 10px;
+            margin-top: 5px;
+            font-weight: bold;
+            color: darkgray;
+        }
+
+        .commentInput {
+            display: flex;
+            border-top: rgb(240, 240, 240) solid 1px;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .commentInput > textarea {
+            flex-grow: 1;
+            margin-right: 10px;
+            margin-left: 10px;
+            font-size: 14px;
+            height: 21px;
+            padding: 0;
+            border: none;
+            resize: none;
+        }
+
+        .commentInput > textarea:focus {
+            outline: none;
+        }
+
+        .commentInput > button {
+            background-color: white;
+            border: none;
+            color: deepskyblue;
+            font-weight: bold;
+            font-size: 14px;
+        }
