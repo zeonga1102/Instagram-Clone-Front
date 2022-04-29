@@ -94,13 +94,21 @@
 
         .container {
             background-color: purple;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(483px, auto));
+            /*display: grid;*/
+            /*grid-template-columns: repeat(auto-fill, minmax(483px, auto));*/
             height: 2000px;
             padding: initial;
+
+            max-width: 975px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .timeline {
+            min-width: 483px;
             background-color: gray;
         }
 
@@ -109,6 +117,12 @@
             height: 500px;
             position: sticky;
             top: 60px;
+            flex-grow: 1;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            max-width: 600px;
+            min-width: 375px;
         }
 
         .card {
@@ -117,7 +131,7 @@
             margin-top: 30px;
 
             border-color: gainsboro;
-            border-radius: 5px;
+            border-radius: 3px;
         }
 
         .card-body {
@@ -171,6 +185,12 @@
 
         p {
             margin-bottom: 0;
+        }
+
+        .recommendTop {
+            display: flex;
+            flex-direction: row;
+            
         }
 
     </style>
@@ -260,6 +280,10 @@
 
             </div>
             <div class="recommend">
+                <div class="recommendTop">
+                    <p style="flex-grow: 1">회원님을 위한 추천</p>
+                    <p>모두 보기</p>
+                </div>
 
             </div>
             <footer>
