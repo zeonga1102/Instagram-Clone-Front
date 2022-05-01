@@ -235,6 +235,12 @@ body {
             align-items: center;
         }
 
+        @media screen and (max-width: 735px) {
+            .commentInput {
+                display: none;
+            }
+        }
+
         .commentInput > textarea {
             flex-grow: 1;
             margin-right: 10px;
