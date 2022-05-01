@@ -26,24 +26,20 @@
                 let text = $(id).text();
                 feedArray[i] = text;
 
-
                 if (text.length >= 100) {
-                    let text_short = text.substring(0, 100) + "... ";
-                    let buttonId = 'moreButton' + i
-                    let moreButton = `<Button id="${buttonId}" onclick="moreButtonClick(${i})" class="showMore">더 보기</Button>`;
+                    let text_short = text.substring(0, 100).trim() + "... ";
+                    let moreButton = `<Button onclick="moreButtonClick(this, ${i})" class="showMore">더 보기</Button>`;
 
                     $(id).parents('.feedText').append(moreButton)
                     $(id).text(text_short)
-
                 }
             }
         }
 
-        function moreButtonClick(i) {
-            let buttonId = '#moreButton' + i
-            let textId = '#text' + i
-            $(buttonId).hide()
-            $(textId).text(feedArray[i])
+        function moreButtonClick(obj, i) {
+            let textId = '#text' + i;
+            $(obj).hide();
+            $(textId).text(feedArray[i]);
         }
 
         function resize(obj) {
