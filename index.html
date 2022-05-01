@@ -15,7 +15,36 @@
 
         $(document).ready(function () {
             addFeed()
+            showMoreButton()
         })
+
+        let feedArray = []
+
+        function showMoreButton() {
+            for(let i=0; i<3; i++) {
+                let id = '#text' + i
+                let text = $(id).text();
+                feedArray[i] = text;
+
+
+                if (text.length >= 100) {
+                    let text_short = text.substring(0, 100) + "... ";
+                    let buttonId = 'moreButton' + i
+                    let moreButton = `<Button id="${buttonId}" onclick="moreButtonClick(${i})" class="showMore">더 보기</Button>`;
+
+                    $(id).parents('.feedText').append(moreButton)
+                    $(id).text(text_short)
+
+                }
+            }
+        }
+
+        function moreButtonClick(i) {
+            let buttonId = '#moreButton' + i
+            let textId = '#text' + i
+            $(buttonId).hide()
+            $(textId).text(feedArray[i])
+        }
 
         function resize(obj) {
             obj.style.height = '1px';
@@ -24,6 +53,7 @@
 
         function addFeed() {
             for (let i=0; i<3; i++) {
+                let textId = 'text' + i
                 let carouselId = 'carouselId' + i
                 let temp_html = `<div class="card">
                                     <div class="card-body">
@@ -81,9 +111,11 @@
                                                 <img width="24px" height="24px" src="images/bookmark.png">
                                             </div>
                                             <p class="likeCount">좋아요 2개</p>
-                                            <p style="font-size: 14px"><span style="font-size: small; font-weight: bold">user_id </span>This is a wider card with supporting text below as a natural lead-in
-                                                to
-                                                additional content. This content is a little bit longer.</p>
+                                            <div class="feedText">
+                                                <p style="font-size: 14px"><span style="font-size: small; font-weight: bold">user_id </span><span id="${textId}">This is a wider card with supporting text below as a natural lead-in
+                                                    to
+                                                    additional content. This content is a little bit longer.</span></p>
+                                            </div>
                                             <p class="elapsedTime">4시간 전</p>
                                         </div>
                                         <div class="commentInput">
@@ -93,7 +125,7 @@
                                         </div>
                                     </div>
                                 </div>`
-                $('#timeline').append(temp_html)
+                $('.timeline').append(temp_html)
 
             }
 
@@ -123,7 +155,7 @@
     </header>
     <div class="container">
 <!--        타임라인 피드 표시 영역-->
-        <div id="timeline" class="timeline">
+        <div class="timeline">
 <!--            피드 추가-->
 
         </div>

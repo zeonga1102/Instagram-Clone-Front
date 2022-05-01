@@ -244,6 +244,7 @@ body {
             padding: 0;
             border: none;
             resize: none;
+            max-height: 80px;
         }
 
         .commentInput > textarea:focus {
@@ -256,4 +257,20 @@ body {
             color: deepskyblue;
             font-weight: bold;
             font-size: 14px;
+        }
+
+        .feedText {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .showMore {
+            font-size: 14px;
+            min-width: 50px;
+            margin-left: 3px;
+            color: darkgrey;
+
+            background: none;
+            border: none;
         }
