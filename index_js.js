@@ -5,6 +5,7 @@ $(document).ready(function () {
 
         let feedArray = []
 
+        // 더보기 버튼 달아주는 함수
         function showMoreButton() {
             for(let i=0; i<3; i++) {
                 let id = '#text' + i
@@ -21,12 +22,14 @@ $(document).ready(function () {
             }
         }
 
+        // 더보기 버튼 눌렀을 때 실행되는 함수
         function moreButtonClick(obj, i) {
             let textId = '#text' + i;
             $(obj).hide();
             $(textId).text(feedArray[i]);
         }
 
+        // 댓글 입력할 때 textarea 늘어나고, 버튼 활성화 상태 변경하는 함수
         function inputComment(obj) {
             obj.style.height = '1px';
             obj.style.height = (12 + obj.scrollHeight) + 'px';
@@ -37,11 +40,6 @@ $(document).ready(function () {
                 $(obj).next('Button').attr('disabled', true);
             }
 
-        }
-
-        function showModal() {
-            $('.modal').css('display', 'flex');
-            $('body').css('overflow', 'hidden');
         }
 
         function addFeed() {
@@ -128,6 +126,13 @@ $(document).ready(function () {
             }
         }
 
+        // 모달 띄우는 함수
+        function showModal() {
+            $('.modal').css('display', 'flex');
+            $('body').css('overflow', 'hidden');
+        }
+
+        // 모달 없애는 함수
         function closeModalButtonClick() {
             $('.modal').css('display', 'none');
             $('body').css('overflow', 'visible');
