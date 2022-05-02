@@ -188,7 +188,7 @@ body {
         .userList > p {
             font-size: small;
             font-weight: bold;
-            color: deepskyblue;
+            color: rgb(0, 150, 255);;
         }
 
         p {
@@ -233,6 +233,10 @@ body {
             margin-bottom: 10px;
         }
 
+        .feedText {
+            margin-bottom: 5px;
+        }
+
         .elapsedTime {
             font-size: 10px;
             margin-top: 5px;
@@ -272,13 +276,13 @@ body {
         .commentInput > button {
             background-color: white;
             border: none;
-            color: deepskyblue;
+            color: rgb(0, 150, 255);
             font-weight: bold;
             font-size: 14px;
         }
 
         .commentInput > button:disabled {
-
+            color: rgba(0, 150, 255, 0.5);
         }
 
         .feedText {
