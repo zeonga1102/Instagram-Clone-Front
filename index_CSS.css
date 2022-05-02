@@ -127,16 +127,28 @@ body {
         }
 
         .feedHeader {
-            display: grid;
-            grid-template-columns: 1fr 30px;
+            display: flex;
+            /*grid-template-columns: 1fr 30px;*/
 
             height: 60px;
             padding-left: 15px;
             padding-right: 15px;
+
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .feedHeader > img {
-            margin: auto;
+        .optionButton {
+            width: 24px;
+            height: 24px;
+
+            border: none;
+            background-color: initial;
+
+            background-image: url("images/option.png");
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .user {
@@ -279,4 +291,8 @@ body {
 
             background: none;
             border: none;
+        }
+
+        .modal {
+           display: none;
         }
