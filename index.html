@@ -49,6 +49,7 @@
 
         function showModal() {
             $('.modal').css('display', 'flex');
+            $('body').css('overflow', 'hidden');
         }
 
         function addFeed() {
@@ -240,19 +241,20 @@
 
     <div class="modal">
         <div class="modalWindow">
-            <button class="buttonModalClose" onclick="closeModalButtonClick()">취소</button>
-            <button class="buttonModalClose" onclick="closeModalButtonClick()">취소</button>
-            <button class="buttonModalClose" onclick="closeModalButtonClick()">취소</button>
-            <button class="buttonModalClose" onclick="closeModalButtonClick()">취소</button>
-            <button class="buttonModalClose" onclick="closeModalButtonClick()">취소</button>
-            <button class="buttonModalClose" onclick="closeModalButtonClick()">취소</button>
-            <button class="buttonModalClose" onclick="closeModalButtonClick()">취소</button>
+            <button style="border:none; color: red; font-weight: bold" class="modalButton">신고</button>
+            <button style="color: red; font-weight: bold" class="modalButton">팔로우 취소</button>
+            <button class="modalButton">게시물로 이동</button>
+            <button class="modalButton">공유 대상...</button>
+            <button class="modalButton">링크 복사</button>
+            <button class="modalButton">퍼가기</button>
+            <button class="modalButton" onclick="closeModalButtonClick()">취소</button>
         </div>
     </div>
 
     <script>
         function closeModalButtonClick() {
             $('.modal').css('display', 'none');
+            $('body').css('overflow', 'visible');
         }
     </script>
 

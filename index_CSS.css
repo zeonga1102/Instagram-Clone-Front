@@ -294,5 +294,36 @@ body {
         }
 
         .modal {
-           display: none;
+            display: none;
+            position: absolute;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .modalWindow {
+            display: flex;
+            width: 400px;
+            flex-direction: column;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        @media screen and (max-width: 735px) {
+            .modalWindow {
+                width: 260px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .modalButton {
+            width: 100%;
+            height: 48px;
+            background: none;
+            border: none;
+            border-top: gainsboro 1px solid;
+            font-size: 14px;
         }
