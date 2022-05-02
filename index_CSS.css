@@ -309,7 +309,7 @@ body {
 
         .modal {
             display: none;
-            position: absolute;
+            position: fixed;
             width: 100%;
             align-items: center;
             justify-content: center;
