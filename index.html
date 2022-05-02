@@ -28,9 +28,9 @@
 
                 if (text.length >= 100) {
                     let text_short = text.substring(0, 100).trim() + "... ";
-                    let moreButton = `<Button onclick="moreButtonClick(this, ${i})" class="showMore">더 보기</Button>`;
+                    let moreButton = `<a onclick="moreButtonClick(this, ${i})" class="showMore">더 보기</a>`;
 
-                    $(id).parents('.feedText').append(moreButton)
+                    $(id).parent('p').append(moreButton)
                     $(id).text(text_short)
                 }
             }
