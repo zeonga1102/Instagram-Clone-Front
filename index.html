@@ -45,7 +45,10 @@
         function resize(obj) {
             obj.style.height = '1px';
             obj.style.height = (12 + obj.scrollHeight) + 'px';
-            console.log(obj.text())
+            if($(obj).val().length > 0) {
+                $(obj).next('Button').attr('disabled', false);
+            }
+
         }
 
         function showModal() {
@@ -127,7 +130,7 @@
                                         <div class="commentInput">
                                             <img width="24px" height="24px" src="images/emoji.png">
                                             <textarea onkeydown="resize(this)" onkeyup="resize(this)" id="textareaComment" placeholder="댓글 달기..."></textarea>
-                                            <button>게시</button>
+                                            <button disabled="false">게시</button>
                                         </div>
                                     </div>
                                 </div>`
