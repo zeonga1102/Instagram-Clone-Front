@@ -42,11 +42,14 @@
             $(textId).text(feedArray[i]);
         }
 
-        function resize(obj) {
+        function inputComment(obj) {
             obj.style.height = '1px';
             obj.style.height = (12 + obj.scrollHeight) + 'px';
-            if($(obj).val().length > 0) {
+            if($(obj).val() != '') {
                 $(obj).next('Button').attr('disabled', false);
+            }
+            else {
+                $(obj).next('Button').attr('disabled', true);
             }
 
         }
@@ -122,6 +125,7 @@
                                                     additional content. This content is a little bit longer.</span></p>
                                             </div>
                                             <div>
+                                                <p style="font-size: 14px; color: darkgray">댓글 10개 모두 보기</p>
                                                 <p style="font-size: 14px"><span style="font-size: small; font-weight: bold">commenter_id </span><span>댓글입니다.</span></p>
                                             </div>
                                             <p class="elapsedTime">4시간 전</p>
@@ -129,7 +133,7 @@
 <!--                                            댓글 다는 부분-->
                                         <div class="commentInput">
                                             <img width="24px" height="24px" src="images/emoji.png">
-                                            <textarea onkeydown="resize(this)" onkeyup="resize(this)" id="textareaComment" placeholder="댓글 달기..."></textarea>
+                                            <textarea onkeydown="inputComment(this)" onkeyup="inputComment(this)" id="textareaComment" placeholder="댓글 달기..."></textarea>
                                             <button disabled="false">게시</button>
                                         </div>
                                     </div>
