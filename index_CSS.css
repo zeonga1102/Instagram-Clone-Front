@@ -299,6 +299,12 @@ body {
 
             background: none;
             border: none;
+
+            text-decoration: none;
+        }
+
+        .showMore:hover {
+            color: darkgrey;
         }
 
         .modal {
